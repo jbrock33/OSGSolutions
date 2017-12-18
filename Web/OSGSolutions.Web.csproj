@@ -201,6 +201,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\api\EchoApiController.cs" />
+    <Compile Include="Controllers\api\ScraperController.cs" />
     <Compile Include="Controllers\api\UsersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -219,6 +220,9 @@
     <Content Include="app\public\index.html" />
     <Content Include="app\public\home.html" />
     <Content Include="app\public\modules\routes\app.routes.js" />
+    <Content Include="app\public\modules\scraping\scraper.controller.js" />
+    <Content Include="app\public\modules\scraping\scraper.html" />
+    <Content Include="app\public\modules\scraping\scraper.service.js" />
     <Content Include="app\public\modules\users\login.controller.js" />
     <Content Include="app\public\modules\users\login.html" />
     <Content Include="app\public\modules\users\login.service.js" />
