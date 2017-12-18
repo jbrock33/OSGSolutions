@@ -22,8 +22,22 @@
             .state({
                 name: 'scraping',
                 url: '/scraping',
-                templateUrl: '/app/public/scraping.html',
+                templateUrl: '/app/public/modules/scraping/scraping.html',
                 title: 'Scraping'
+            })
+            .state({
+                name: 'register',
+                url: '/register',
+                templateUrl: '/app/public/modules/users/register.html',
+                controller: "registerController as registerCtrl",
+                title: 'Register'
+            })
+            .state({
+                name: 'login',
+                url: '/login',
+                templateUrl: '/app/public/modules/users/login.html',
+                controller: "loginController as loginCtrl",
+                title: 'Login'
             });
     }
 })();

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OSGSolutions.Services
+namespace OSGSolutions.Models.Responses
 {
-    public class Class1
+    public abstract class BaseResponse
     {
+        public bool IsSuccessful { get; set; }
     }
 }

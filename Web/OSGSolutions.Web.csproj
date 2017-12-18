@@ -201,6 +201,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\api\EchoApiController.cs" />
+    <Compile Include="Controllers\api\UsersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -218,7 +219,13 @@
     <Content Include="app\public\index.html" />
     <Content Include="app\public\home.html" />
     <Content Include="app\public\modules\routes\app.routes.js" />
-    <Content Include="app\public\scraping.html" />
+    <Content Include="app\public\modules\users\login.controller.js" />
+    <Content Include="app\public\modules\users\login.html" />
+    <Content Include="app\public\modules\users\login.service.js" />
+    <Content Include="app\public\modules\users\register.controller.js" />
+    <Content Include="app\public\modules\users\register.html" />
+    <Content Include="app\public\modules\scraping\scraping.html" />
+    <Content Include="app\public\modules\users\register.service.js" />
     <Content Include="Content\angular-material.css" />
     <Content Include="Content\angular-material.layout-attributes.css" />
     <Content Include="Content\angular-material.layout-attributes.min.css" />
@@ -228,7 +235,10 @@
     <Content Include="Content\angular-material.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -282,6 +292,11 @@
     <Content Include="Scripts\angular-cookies.min.js.map" />
     <Content Include="Scripts\angular-aria.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_af-na.js" />
     <Content Include="Scripts\i18n\angular-locale_af-za.js" />
@@ -1083,6 +1098,16 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OSGSolutions.Models\OSGSolutions.Models.csproj">
+      <Project>{eee1380d-02a1-4f46-8fd7-2ae88031d754}</Project>
+      <Name>OSGSolutions.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OSGSolutions.Services\OSGSolutions.Services.csproj">
+      <Project>{BC682A7A-877D-4223-8637-3B6D030FCA5B}</Project>
+      <Name>OSGSolutions.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OSGSolutions.Models
+namespace OSGSolutions.Models.Responses
 {
-    public class Class1
+    public class ItemsResponse<T> : SuccessResponse
     {
+        public List<T> Items { get; set; }
     }
 }
