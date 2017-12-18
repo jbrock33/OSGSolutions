@@ -10,29 +10,43 @@
 
     <link href="../../Content/angular-material.min.css" rel="stylesheet" />
     <link href="../../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../../Content/font-awesome.min.css" rel="stylesheet" />
 
 </head>
 <body>
      
     <a ui-sref="home" href="">Home</a>
+    <a ui-sref="register" href="">Register</a>
+    <a ui-sref="login" href="">Log In</a>
     <a ui-sref="scraping" href="">Scraping</a>
 
-    <div ui-view class="hideX jumbotron">
+    <div ui-view class="hideX">
     </div>
 
 
     <script src="../../Scripts/jquery-1.10.2.min.js"></script>
     <script src="../../Scripts/angular.js"></script>
+    <script src="../../Scripts/angular-animate.min.js"></script>
+    <script src="../../Scripts/angular-aria.min.js"></script>
+    
     <script src="../../Scripts/angular-ui-router.min.js"></script>
     <script src="../../Scripts/angular-route.min.js"></script>
 
     <script src="../../Scripts/bootstrap.min.js"></script>
 
     <script src="../../app/public/app.public.js"></script>
-    <script src="../../Scripts/angular-cookies.js"></script>
 
+    <script src="../../Scripts/angular-cookies.js"></script>
+    <script src="../../Scripts/angular-messages.min.js"></script>
     <script src="../../Scripts/angular-material.min.js"></script>
+    <script src="../../Scripts/angular-sanitize.min.js"></script>
 
     <script src="../../app/public/modules/routes/app.routes.js"></script>
+
+    <script src="../../app/public/modules/users/login.service.js"></script>
+    <script src="../../app/public/modules/users/login.controller.js"></script>
+
+    <script src="../../app/public/modules/users/register.service.js"></script>
+    <script src="../../app/public/modules/users/register.controller.js"></script>
 </body>
 </html>

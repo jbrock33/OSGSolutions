@@ -1,0 +1,49 @@
+﻿<style>
+    .input-div md-input-container {
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+</style>
+
+<form name="registerForm" ng-submit="" novalidate>
+    <h3 class="text-left"><i class="fa fa-lock"></i>Register an account</h3>
+    <div class="row">
+        <div class="col-xs-4">
+            <div class="input-div">
+                <label for="email">Your E-mail</label>
+                <div class="md-block">
+
+                    <input id="email" ng-model="registerCtrl.registerUser.email" type="email" name="email" required>
+                    <p ng-show="registerForm.email.$invalid && !registerForm.email.$pristine">Please enter a valid email.</p>
+                </div>
+            </div>
+            <div class="input-div">
+                <label for="password">Enter Password</label>
+                <div class="md-block">
+
+                    <input id="password" ng-model="registerCtrl.registerUser.password" type="password" name="password" required ng-pattern="/.*[0-9].*/" ng-minlength="6">
+                    <p ng-show="registerForm.password.$invalid && !registerForm.password.$pristine">Please enter a valid password.</p>
+                    </div>
+                </div>
+            <div class="input-div">
+                <label for="password">Confirm Password</label>
+                <div class="md-block">
+
+                    <input id="confPassword" type="password" name="confPassword" required ng-pattern="/.*[0-9].*/" ng-minlength="6">
+                    <p ng-show="registerForm.confPassword.$invalid && !registerForm.confPassword.$pristine">Please enter a valid password.</p>
+                    </div>
+                </div>
+            <div class="input-div md-form">
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <p ng-show="loginCtrl.invalidMsg"><font color="red">Login failed. Invalid e-mail or password.</font></p>
+                </div>
+            </div>
+            <footer class="text-center">
+                <md-button type="submit" class="btn btn-lg btn-skin button1" ng-disabled="registerForm.$invalid" ng-click="registerCtrl.register()">Register</md-button>
+            </footer>
+        </div>
+
+    </div>
+
+</form><!--register form-->
