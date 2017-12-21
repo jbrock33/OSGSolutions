@@ -1,40 +1,36 @@
-﻿<style>
-    .input-div md-input-container {
-        margin-top: 0px;
-        margin-bottom: 5px;
-    }
-</style>
-
-<form name="loginForm" ng-submit="" novalidate>
-    <h3 class="text-left"><i class="fa fa-unlock"></i>Log in to your account</h3>
-    <div class="row">
-        <div class="col-xs-4">
-            <div class="input-div">
-                <label for="email">Your E-mail</label>
-                <div class="md-block">
-                    <input id="email"  ng-model="loginCtrl.loginUser.email" type="email" name="email" required>
-                    <p ng-show="loginForm.email.$invalid && !loginForm.email.$pristine">Please enter a valid email.</p>
+﻿
+<div class="col-xs-3 form">
+    <form name="loginForm" ng-submit="" novalidate>
+        <h3 class="text-left"><i class="fa fa-unlock"></i>Log in to your account</h3>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="input-div">
+                    <label for="email">Your E-mail</label>
+                    <div class="md-block">
+                        <input id="email" ng-model="loginCtrl.loginUser.email" type="email" name="email" required>
+                        <p ng-show="loginForm.email.$invalid && !loginForm.email.$pristine">Please enter a valid email.</p>
                     </div>
                 </div>
-            <div class="input-div">
-                <label for="password">Enter Password</label>
-                <div class="md-block">
+                <div class="input-div">
+                    <label for="password">Enter Password</label>
+                    <div class="md-block">
 
-                    <input id="password" type="password"  ng-model="loginCtrl.loginUser.basicPassword" name="password" required ng-pattern="/.*[0-9].*/" ng-minlength="6">
-                    <p ng-show="loginForm.basicPassword.$invalid && !loginForm.basicPassword.$pristine">Please enter a valid password.</p>
+                        <input id="password" type="password" ng-model="loginCtrl.loginUser.basicPassword" name="password" required ng-pattern="/.*[0-9].*/" ng-minlength="6">
+                        <p ng-show="loginForm.basicPassword.$invalid && !loginForm.basicPassword.$pristine">Please enter a valid password.</p>
                     </div>
                 </div>
-            <div class="input-div md-form">
-                <div class="note"><a href="/forgotPassword/">Forgot password?</a></div>
-                <div class="col-md-6"></div>
-                <div class="col-md-6">
-                    <p ng-show="loginCtrl.invalidMsg"><font color="red">Login failed. Invalid e-mail or password.</font></p>
+                <div class="input-div md-form">
+                    <div class="note"><a href="/forgotPassword/">Forgot password?</a></div>
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6">
+                        <p ng-show="loginCtrl.invalidMsg"><font color="red">Login failed. Invalid e-mail or password.</font></p>
+                    </div>
                 </div>
+                <footer class="text-center">
+                    <md-button type="submit" class="btn btn-lg btn-skin button1" ng-click="loginCtrl.login()" ng-disabled="loginForm.$invalid">Log in</md-button>
+                </footer>
             </div>
-            <footer class="text-center">
-                <md-button type="submit" class="btn btn-lg btn-skin button1" ng-click="loginCtrl.login()" ng-disabled="loginForm.$invalid">Log in</md-button>
-            </footer>
         </div>
-    </div>
 
-</form><!--login form-->
+    </form><!--login form-->
+</div>

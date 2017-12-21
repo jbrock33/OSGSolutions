@@ -1,0 +1,17 @@
+﻿<style>
+    .applied {
+        color: red;
+    }
+    
+</style>
+
+    <div class="indeedjobs">
+
+        <div class="col-xs-6">
+            <p ng-repeat="item in $ctrl.indeedJobs1"><a ng-href="{{item.jobUrl}}">{{item.jobTitle}}</a><br /> <button type="button" class="btn-sm" ng-click="$ctrl.save(item)">Add To Applied</button></p>
+        </div>
+        <div class="col-xs-6">
+            <p ng-repeat="item in $ctrl.indeedJobs2"><a ng-href="{{item.jobUrl}}">{{item.jobTitle}}</a><br /> <button type="button" class="btn-sm" ng-click="$ctrl.save(item)">Add To Applied</button></p>
+        </div>
+    </div>
+

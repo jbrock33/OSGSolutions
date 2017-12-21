@@ -1,0 +1,105 @@
+﻿<div class="col-xs-8 status-table">
+    <table id="datatable" class="table table-striped dt-responsive nowrap">
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>
+                    Title
+                </th>
+                <th>
+                    Status
+                </th>
+                <th>
+                    Last Update
+                </th>
+                <th class="text-center">Edit</th>
+                <th class="text-center">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in $ctrl.statusDisplayList">
+                <td><a ng-href="{{item.url}}">{{item.company}}</a></td>
+                <td>{{item.title}}</td>
+                <td>{{item.status}}</td>
+                <td>{{item.modified | date: 'MM/dd/yyyy h:mm a' : '-Z' }}</td>
+
+                <td class="text-center">
+                    <i href="" class="fa fa-edit" data-toggle="modal" data-target="#manageProductsDialog" ng-click="$ctrl.activeEdit = true; $ctrl.item = item;"></i>
+                </td>
+                
+                <td class="text-center">
+                    <i href="" class="fa fa-remove" ng-click="$ctrl.deleteId(item.id)"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="text-center">
+        <md-button class="fa fa-fast-backward" ng-click="$ctrl.pageBack('1')"></md-button>
+        <md-button class="fa fa-backward" ng-click="$ctrl.pageBack()"></md-button>
+        <span>Page: {{$ctrl.page}} of {{$ctrl.maxPage}}</span>
+        <md-button class="fa fa-forward" ng-click="$ctrl.pageUp()"></md-button>
+        <md-button class="fa fa-fast-forward" ng-click="$ctrl.pageUp('1')"></md-button>
+        <button type="button" class="pull-right" data-toggle="modal" ng-click="$ctrl.createProduct()" data-target="#manageProductsDialog">Add New Entry</button>
+    </div>
+    <div class="modal fade" role="dialog" id="manageProductsDialog">
+        <div class="modal-dialog panel adminProdDialog">
+            <div class="container col-md-12">
+                <div style="padding-top: 5px">
+                    <header class="panel-heading" style="margin-left: -12px">
+                        <h2 class="panel-title" ng-hide="$ctrl.activeEdit">Add An Entry</h2>
+                        <h2 class="panel-title" ng-show="$ctrl.activeEdit">Update An Entry</h2>
+                    </header>
+
+                    <form name="entryForm" novalidate>
+                        <div class="input-div">
+                            <label for="email">Title</label>
+                            <div class="md-block">
+                                <input id="title" ng-model="$ctrl.item.title" type="text" name="title" required>
+                                <!--<p ng-show="entryForm.title.$invalid && !entryForm.title.$pristine">Please enter a valid title.</p>-->
+                            </div>
+                        </div>
+                        <div class="input-div">
+                            <label for="email">Url</label>
+                            <div class="md-block">
+                                <input id="url" ng-model="$ctrl.item.url" type="text" name="url" required>
+                                <!--<p ng-show="entryForm.url.$invalid && !entryForm.url.$pristine">Please enter a valid url.</p>-->
+                            </div>
+                        </div>
+                        <div class="input-div">
+                            <label for="email">Company</label>
+                            <div class="md-block">
+                                <input id="company" ng-model="$ctrl.item.company" type="text" name="company" required>
+                                <!--<p ng-show="entryForm.company.$invalid && !entryForm.company.$pristine">Please enter a valid company.</p>-->
+                            </div>
+                        </div>
+                        <div class="input-div">
+                            <label for="status">Status</label>
+                            <div class="md-block">
+                                <select name="status" ng-model="$ctrl.item.statusId" required>
+                                    <option value="3">Applied</option>
+                                    <option value="4">Phone Interview</option>
+                                    <option value="5">In Person Interview</option>
+                                    <option value="6">In Person Interview 2</option>
+                                    <option value="7">Offer Extended</option>
+                                    <option value="8">Hired</option>
+                                    <option value="1">Denied</option>
+                                    <option value="2">Declined</option>
+                                </select>
+                                </div>
+                            </div>
+                        <br />
+                        <!-- <input type="file"></input> -->
+                        <div class="text-right">
+                            <md-button type="submit" class="btn btn-primary btn-lg rounded" ng-click="$ctrl.submitEntry()" ng-hide="$ctrl.activeEdit"
+                                       ng-disabled="entryForm.$invalid" data-dismiss="modal">Submit</md-button>
+                            <md-button type="submit" class="btn btn-primary btn-lg rounded" ng-click="$ctrl.updateEntry()" ng-show="$ctrl.activeEdit"
+                                       ng-disabled="entryForm.$invalid" data-dismiss="modal">Update</md-button>
+                            <md-button class="btn btn-danger btn-lg rounded" data-dismiss="modal" ng-click="$ctrl.getDisplayList()">Cancel</md-button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

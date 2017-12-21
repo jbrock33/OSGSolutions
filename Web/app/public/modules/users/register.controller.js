@@ -31,7 +31,10 @@
 
         function _httpSuccess(res) {
             console.log(res);
-            $state.go("home");
+            toastr.options.progressBar = true;
+            toastr.options.showMethod = "slideDown";
+            toastr.success("Register Success!");
+            $state.go("login");
         };
 
         function _httpError(err) {
