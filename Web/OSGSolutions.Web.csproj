@@ -201,7 +201,9 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\api\EchoApiController.cs" />
+    <Compile Include="Controllers\api\FileUploadController.cs" />
     <Compile Include="Controllers\api\ScraperController.cs" />
+    <Compile Include="Controllers\api\StatusApiController.cs" />
     <Compile Include="Controllers\api\UsersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -219,10 +221,18 @@
     <Content Include="app\public\app.public.js" />
     <Content Include="app\public\index.html" />
     <Content Include="app\public\home.html" />
+    <Content Include="app\public\modules\fileupload\fileupload.controller.js" />
+    <Content Include="app\public\modules\fileupload\fileupload.html" />
+    <Content Include="app\public\modules\fileupload\fileupload.service.js" />
+    <Content Include="app\public\modules\fileupload\upload.html" />
     <Content Include="app\public\modules\routes\app.routes.js" />
     <Content Include="app\public\modules\scraping\scraper.controller.js" />
     <Content Include="app\public\modules\scraping\scraper.html" />
     <Content Include="app\public\modules\scraping\scraper.service.js" />
+    <Content Include="app\public\modules\statuses\status.html" />
+    <Content Include="app\public\modules\statuses\statuses.controller.js" />
+    <Content Include="app\public\modules\statuses\statuses.html" />
+    <Content Include="app\public\modules\statuses\statuses.service.js" />
     <Content Include="app\public\modules\users\login.controller.js" />
     <Content Include="app\public\modules\users\login.html" />
     <Content Include="app\public\modules\users\login.service.js" />
@@ -241,6 +251,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -283,6 +295,9 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\custom\particles.css" />
+    <Content Include="Scripts\custom\particles.js" />
+    <Content Include="Scripts\custom\style.css" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-touch.min.js.map" />
@@ -301,6 +316,8 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\toastr.scss" />
+    <Content Include="Content\toastr.less" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_af-na.js" />
     <Content Include="Scripts\i18n\angular-locale_af-za.js" />
@@ -1050,6 +1067,8 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1088,6 +1107,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\admin\modules\" />
+    <Folder Include="app\public\images\" />
+    <Folder Include="app\public\modules\NewFolder1\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>

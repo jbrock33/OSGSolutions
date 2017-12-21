@@ -30,6 +30,9 @@
         function _httpSuccess(res) {
             console.log(res);
             if (res.data === true) {
+                toastr.options.progressBar = true;
+                toastr.options.showMethod = "slideDown";
+                toastr.success("Log In Success!");
                 vm.$state.go("home");
             } else {
                 vm.invalidMsg = "Incorrect email or password!";

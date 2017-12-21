@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\EncodedImage.cs" />
+    <Compile Include="Domain\StatusEntry.cs" />
+    <Compile Include="Domain\UploadFile.cs" />
     <Compile Include="Domain\LoginUser.cs" />
     <Compile Include="Domain\RegisterUser.cs" />
     <Compile Include="Domain\ScraperItem.cs" />

@@ -14,6 +14,7 @@ namespace Web.Controllers.api
     [RoutePrefix("api/scraper"), AllowAnonymous]
     public class ScraperController : ApiController
     {
+        [Route]
         [HttpGet]
         public HttpResponseMessage GetAll()
         {

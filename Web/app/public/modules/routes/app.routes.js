@@ -38,6 +38,18 @@
                 templateUrl: '/app/public/modules/users/login.html',
                 controller: "loginController as loginCtrl",
                 title: 'Login'
+            })
+            .state({
+                name: 'fileupload',
+                url: '/fileupload',
+                templateUrl: '/app/public/modules/fileupload/fileupload.html',
+                title: 'FileUpload'
+            })
+            .state({
+                name: 'statuses',
+                url: '/statuses',
+                templateUrl: '/app/public/modules/statuses/statuses.html',
+                title: 'Statuses'
             });
     }
 })();
